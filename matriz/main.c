@@ -2,14 +2,15 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <time.h>
-
 #define ESC 27
 #define DIM 9
+
 void cargaMatrizRandom(int fil, int col, int m[fil][col]);
 void mostrarMatriz(int fil, int col, int m[fil][col]);
 void muestraNombres(int dim, char n[dim][30], int v);
 int cargaNombres(int dim, char n[dim][30]);
 int SumaMatriz(int fil, int col, int m[fil][col]);
+int CargaNombresRandom (char nombres[][30],int dim);
 int main()
 {
     char opcion;
@@ -55,6 +56,13 @@ int main()
             printf("\n \t\t\t <<<<< Suma matriz >>>>> \n");
             printf("La suma de los elementos de la matriz es: %d \n",SumaMatriz(fil,col, matriz));
             break;
+        case '6':
+            printf("Cargando nombres...\n");
+            vNombres = CargaNombresRandom(nombres,DIM);
+            break;
+        case '7':
+            printf("ordenando nombres...\n");
+            ordenaNombresPorSeleccion(nombres,vNombres);
         }
         system("pause");
         system("cls");
@@ -66,7 +74,6 @@ int main()
 
     return 0;
 }
-
 
 void cargaMatrizRandom(int fil, int col, int m[fil][col])
 {
@@ -88,6 +95,7 @@ void mostrarMatriz(int fil, int col, int m[fil][col])
             printf("%d |",m[i][j]);
         }
         printf("\n");
+
     }
 }
 
@@ -99,8 +107,10 @@ void menuOpciones()
     printf("\n 3. <<<<< Carga Nombres >>>>>");
     printf("\n 4. <<<<< Muestra Nombres >>>>>");
     printf("\n 5. <<<<< Suma matriz >>>>>");
+    printf("\n 6. <<<<< Carga Nombres Random >>>>>");
     printf("\n 6. ");
 }
+
 int cargaNombres(int dim,char n[DIM][30])
 {
     int i = 0;
@@ -116,6 +126,7 @@ int cargaNombres(int dim,char n[DIM][30])
     }
     return i;
 }
+
 void muestraNombres(int dim, char n[dim][30], int v)
 {
     printf("\n Mostrando nombres");
@@ -127,6 +138,7 @@ void muestraNombres(int dim, char n[dim][30], int v)
     }
 
 }
+
 int SumaMatriz(int fil, int col, int m[fil][col])
 {
     int suma = 0;
@@ -141,3 +153,68 @@ int SumaMatriz(int fil, int col, int m[fil][col])
 
     return suma;
 }
+
+void NombreRandom(char n[][30]){
+char nombres[][30] = {
+"santiago","nicolas","augusto","sergio",
+
+
+};
+//printf("%d",sizeof(nombres)/30)
+strcpy(n,nombres[rand()%sizeof(nombres)/30]);
+}
+int CargaNombresRandom (char n[][30],int dim){
+int i;
+for (i = 0; i<dim;i++){
+ NombreRandom(n[i]);
+}
+
+return i;
+}
+
+int buscaPosMenorNombre (char n[][30],int v){
+int posMenor = -1;
+
+if(v>0){
+    posMenor = 0;
+    for(int i = 1;i<v;i++)
+    {
+        if(strcmp(n[i],n[posMenor])<0){
+           posMenor = i;
+        }
+    }
+}
+return posMenor;
+}
+void ordenaNombresPorSeleccion(char n[][30],int v){
+for(int i = 0;i<v-1;i++){
+    int posMenor=buscaPosMenorNombreParaOrdenar(n,v,i);
+    intercambioNombres(n[i],n[posMenor]);
+}
+}
+
+void intercambioNombres(char n1[],char n2[]){
+char aux[30];
+strcpy(aux,n1);
+strcpy(n1,n2);
+strcpy(n2,aux);
+}
+
+int buscaPosMenorNombreParaOrdenar (char n[][30],int v,int inicio){
+int posMenor = inicio;
+    for(int i = inicio+1;i<v;i++)
+    {
+        if(strcmp(n[i],n[posMenor])<0){
+           posMenor = i;
+        }
+    }
+return posMenor;
+}
+
+
+
+
+
+
+
+

@@ -38,6 +38,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="mocks.h" />
+		<Unit filename="mocksAlumno.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mocksAlumno.h" />
 		<Unit filename="stAlumno.c">
 			<Option compilerVar="CC" />
 		</Unit>

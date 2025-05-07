@@ -14,11 +14,7 @@ int main()
     printf("\n <<<<<< Listado de Alumnos >>>> \n");
     muestraArregloAlumnos(alumnos,vAlumnos);
     stAlumno a = alumnos[99];
-
-
-
     return 0;
-
     }
 
 
@@ -36,16 +32,11 @@ while(v <dim && opcion != ESC){
     system("cls");
 }
 return i;
-
-
 }
+
 void muestraArregloAlumnos(stAlumno a[], int v){
 for (int i=0; i<v;i++){
     mostrarUnAlumno(a[i]);
-
-
-
 }
-
 }
 

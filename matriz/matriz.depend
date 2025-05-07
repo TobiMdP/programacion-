@@ -1,7 +1,22 @@
 # depslib dependency file v1.0
-1745281204 source:c:\users\usuario\desktop\programacion--main\matriz\main.c
+1746575573 source:c:\users\usuario\downloads\matriz\main.c
 	<stdio.h>
 	<stdlib.h>
+	"stAlumno.h"
 	<conio.h>
-	<time.h>
+	"mocks.h"
+
+1746575367 c:\users\usuario\downloads\matriz\stalumno.h
+	<stdio.h>
+	<stdlib.h>
+
+1746575367 source:c:\users\usuario\downloads\matriz\stalumno.c
+	"stAlumno.h"
+	<stdlib.h>
+
+1746575573 c:\users\usuario\downloads\matriz\mocks.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"stAlumno.h"
 

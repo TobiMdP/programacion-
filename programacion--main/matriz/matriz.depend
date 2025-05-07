@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1746575573 source:c:\users\usuario\downloads\matriz\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stAlumno.h"
+	<conio.h>
+	"mocks.h"
+
+1746575367 c:\users\usuario\downloads\matriz\stalumno.h
+	<stdio.h>
+	<stdlib.h>
+
+1746575367 source:c:\users\usuario\downloads\matriz\stalumno.c
+	"stAlumno.h"
+	<stdlib.h>
+
+1746575573 c:\users\usuario\downloads\matriz\mocks.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"stAlumno.h"
+
+1746562364 source:c:\users\usuario\desktop\programacion--main\matriz\mocks.c
+	"mocks.h"
+
+1746653491 c:\users\usuario\desktop\programacion--main\matriz\mocks.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1746562364 source:c:\users\usuario\desktop\programacion--main\matriz\stalumno.c
+	"stAlumno.h"
+	<stdlib.h>
+
+1746562364 c:\users\usuario\desktop\programacion--main\matriz\stalumno.h
+	<stdio.h>
+	<stdlib.h>
+
+1746653491 source:c:\users\usuario\desktop\programacion--main\matriz\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stAlumno.h"
+	<conio.h>
+	"mocks.h"
+	"mocksAlumno.h"
+
+1746653491 c:\users\usuario\desktop\programacion--main\matriz\mocksalumno.h
+	"stAlumno.h"
+	<stdio.h>
+	<stdlib.h>
+

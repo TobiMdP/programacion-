@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "stAlumno.h"
+
 
 void cargaNombre (char nombre []);
 void cargaApellido (char apellido []);

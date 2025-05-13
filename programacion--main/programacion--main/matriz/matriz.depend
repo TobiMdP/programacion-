@@ -20,27 +20,32 @@
 	<string.h>
 	"stAlumno.h"
 
-1746643498 source:c:\users\usuario\downloads\programacion--main\matriz\main.c
+1746562364 source:c:\users\usuario\desktop\programacion--main\matriz\mocks.c
+	"mocks.h"
+
+1746653491 c:\users\usuario\desktop\programacion--main\matriz\mocks.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1746562364 source:c:\users\usuario\desktop\programacion--main\matriz\stalumno.c
+	"stAlumno.h"
+	<stdlib.h>
+
+1746562364 c:\users\usuario\desktop\programacion--main\matriz\stalumno.h
+	<stdio.h>
+	<stdlib.h>
+
+1746653491 source:c:\users\usuario\desktop\programacion--main\matriz\main.c
 	<stdio.h>
 	<stdlib.h>
 	"stAlumno.h"
 	<conio.h>
 	"mocks.h"
+	"mocksAlumno.h"
 
-1746643498 c:\users\usuario\downloads\programacion--main\matriz\stalumno.h
-	<stdio.h>
-	<stdlib.h>
-
-1746643498 c:\users\usuario\downloads\programacion--main\matriz\mocks.h
-	<stdlib.h>
-	<stdio.h>
-	<string.h>
+1746653491 c:\users\usuario\desktop\programacion--main\matriz\mocksalumno.h
 	"stAlumno.h"
-
-1746643498 source:c:\users\usuario\downloads\programacion--main\matriz\mocks.c
-	"mocks.h"
-
-1746643498 source:c:\users\usuario\downloads\programacion--main\matriz\stalumno.c
-	"stAlumno.h"
+	<stdio.h>
 	<stdlib.h>
 

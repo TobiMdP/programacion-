@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1747082306 source:c:\users\usuario\desktop\archivo\mocks.c
+	"mocks.h"
+
+1747082306 c:\users\usuario\desktop\archivo\mocks.h
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"stAlumno.h"
+
+1747082306 c:\users\usuario\desktop\archivo\stalumno.h
+	<stdio.h>
+	<stdlib.h>
+
+1747082306 source:c:\users\usuario\desktop\archivo\mocksalumno.c
+	"mocksAlumno.h"
+
+1747082306 c:\users\usuario\desktop\archivo\mocksalumno.h
+	"stAlumno.h"
+	<stdio.h>
+	<stdlib.h>
+
+1747082306 source:c:\users\usuario\desktop\archivo\stalumno.c
+	"stAlumno.h"
+	<stdlib.h>
+
+1747180070 source:c:\users\usuario\desktop\archivo\main.c
+	<stdio.h>
+	<stdlib.h>
+	"mocks.h"
+	"stAlumno.h"
+	"mocksAlumno.h"
+	"gotoxy.h"
+
+1491400450 source:c:\users\usuario\desktop\archivo\gotoxy.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1491399896 c:\users\usuario\desktop\archivo\gotoxy.h
+

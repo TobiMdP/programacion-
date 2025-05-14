@@ -105,3 +105,16 @@ ultimoId = alumno.id;
 }
 return ultimoId;
 }
+stAlumno buscaDniArchivo (char nombreArchivo[], char dni[]){
+int encontrado = 0;
+stAlumno a;
+FILE *archi = fopen(nombreArchivo,"rb");
+if(archi){
+    while(fread(&a,sizeof(stAlumno),1,archi)>0 && encontrado == 0){
+    if(strcmp(dni, a.dni) == 0){
+    }
+}
+fclose(archi);
+}
+return a;
+}

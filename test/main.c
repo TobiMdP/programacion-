@@ -7,12 +7,15 @@
 #define ARCHI_ALUMNOS "alumnos.dat"
 #define ARCHI_APROBADOS "aprobados.dat"
 #define ARCHI_DESAPROBADOS "desaprobados.dat"
+#include "pila.h"
 void muestraArchivoAlumnos(char nombreArchivo[]);
 void pasarAprobadosDesaprobadosAlumnos(char nombreArchivo[], char aprobados[], char desaprobados[]);
 void arreglo2archivo(stAlumno a[], int v, char nombreArchivo[]);
 int archivo2Arreglo (char archivo[],int dim, stAlumno arreglo[]);
 int ultimoIdAlumno(char nombreArchivo[]);
 void muestraArregloAlumnos(stAlumno a[], int v);
+int notaMinima(char archivo[]);
+int promedioNotas(char archivo[]);
 int main()
 {
      stAlumno alumnos[DIM];
@@ -23,6 +26,8 @@ int vAlumnosArreglo = 0;
 
 // muestraArregloAlumnos(alumnos, vAlumnos);
 ///arreglo2archivo(alumnos, vAlumnos, ARCHI_ALUMNOS);
+Pila origen;
+inicpila(&origen);
  printf("Listado de alumnos");
  muestraArchivoAlumnos(ARCHI_ALUMNOS);
  pasarAprobadosDesaprobadosAlumnos(ARCHI_ALUMNOS,ARCHI_APROBADOS,ARCHI_DESAPROBADOS);
@@ -34,7 +39,9 @@ int vAlumnosArreglo = 0;
  vAlumnosArreglo = archivo2Arreglo(ARCHI_ALUMNOS, DIM, alumnosArreglo);
  printf("%d",vAlumnosArreglo);
  muestraArregloAlumnos(alumnosArreglo, vAlumnosArreglo);
+ printf("el promedio de las notas es: %d",promedioNotas(ARCHI_APROBADOS));
 
+printf("la nota minima es: %d",notaMinima(ARCHI_ALUMNOS));
     return 0;
 }
 
@@ -119,4 +126,37 @@ if(archi)
     fclose(archi);
 }
 return i;
+}
+int notaMinima(char archivo[]){
+
+FILE *archi = fopen(archivo,"rb");
+stAlumno alumno;
+int nota = alumno.nota;
+
+if(archi){
+    while(fread(&alumno,sizeof(stAlumno),1,archi)){
+      if(nota>alumno.nota){
+        nota = alumno.nota;
+      }
+    }
+  fclose(archi);
+}
+return nota;
+}
+int promedioNotas(char archivo[]){
+FILE *archi = fopen(archivo,"rb");
+stAlumno alumno;
+int acum = 0;
+int cont = 0;
+int promedio = 0;
+if(archi){
+    while(fread(&alumno,sizeof(stAlumno),1,archi)){
+   acum += alumno.nota;
+   cont++;
+      }
+      promedio = acum/cont;
+    }
+  fclose(archi);
+
+return promedio;
 }

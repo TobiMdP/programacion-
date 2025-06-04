@@ -5,4 +5,5 @@
 #include "stAlumno.h"
 
 int cargaArregloAlumnosAuto(stAlumno a[], int dim);
+void muestraArregloAlumnos(stAlumno a[], int v);
 #endif // MOCKSALUMNOS_H_INCLUDED

@@ -52,3 +52,41 @@
 1749038643 source:c:\users\usuario\downloads\programacion--main\programacion--main\test\stalumno.c
 	"stAlumno.h"
 
+1749065620 source:c:\users\tobi1\downloads\programacion--main\test\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stAlumno.h"
+	"mocksAlumnos.h"
+	"mocks.h"
+	"pila.h"
+
+1749058704 c:\users\tobi1\downloads\programacion--main\test\stalumno.h
+	<stdlib.h>
+	<stdio.h>
+
+1749065949 c:\users\tobi1\downloads\programacion--main\test\mocksalumnos.h
+	<stdio.h>
+	<stdlib.h>
+	"stAlumno.h"
+
+1749058704 c:\users\tobi1\downloads\programacion--main\test\mocks.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1749058704 source:c:\users\tobi1\downloads\programacion--main\test\mocks.alumnos.c
+	"mocksAlumnos.h"
+
+1749058704 source:c:\users\tobi1\downloads\programacion--main\test\mocks.c
+	"mocks.h"
+
+1749058704 source:c:\users\tobi1\downloads\programacion--main\test\stalumno.c
+	"stAlumno.h"
+
+1490112217 source:c:\users\tobi1\downloads\programacion--main\test\pila.c
+	"pila.h"
+
+1490112217 c:\users\tobi1\downloads\programacion--main\test\pila.h
+	<stdio.h>
+	<malloc.h>
+

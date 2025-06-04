@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1748995147 source:c:\users\usuario\desktop\test\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stAlumno.h"
+	"mocksAlumnos.h"
+	"mocks.h"
+
+1748991021 c:\users\usuario\desktop\test\stalumno.h
+	<stdlib.h>
+	<stdio.h>
+
+1748993595 source:c:\users\usuario\desktop\test\stalumno.c
+	"stAlumno.h"
+
+1748993206 source:c:\users\usuario\desktop\test\mocks.alumnos.c
+	"mocksAlumnos.h"
+
+1748993044 c:\users\usuario\desktop\test\mocksalumnos.h
+	<stdio.h>
+	<stdlib.h>
+	"stAlumno.h"
+
+1748993044 source:c:\users\usuario\desktop\test\mocks.c
+	"mocks.h"
+
+1748993044 c:\users\usuario\desktop\test\mocks.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

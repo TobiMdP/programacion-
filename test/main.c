@@ -7,11 +7,19 @@
 #define ARCHI_ALUMNOS "alumnos.dat"
 #define ARCHI_APROBADOS "aprobados.dat"
 #define ARCHI_DESAPROBADOS "desaprobados.dat"
+void muestraArchivoAlumnos(char nombreArchivo[]);
+void pasarAprobadosDesaprobadosAlumnos(char nombreArchivo[], char aprobados[], char desaprobados[]);
+void arreglo2archivo(stAlumno a[], int v, char nombreArchivo[]);
+int archivo2Arreglo (char archivo[],int dim, stAlumno arreglo[]);
+int ultimoIdAlumno(char nombreArchivo[]);
+void muestraArregloAlumnos(stAlumno a[], int v);
 int main()
 {
      stAlumno alumnos[DIM];
     int vAlumnos=0;
     ///vAlumnos = cargaArregloAlumnosAuto(alumnos, DIM);
+stAlumno alumnosArreglo [DIM];
+int vAlumnosArreglo = 0;
 
 // muestraArregloAlumnos(alumnos, vAlumnos);
 ///arreglo2archivo(alumnos, vAlumnos, ARCHI_ALUMNOS);
@@ -22,6 +30,10 @@ int main()
  muestraArchivoAlumnos(ARCHI_APROBADOS);
  printf("Listado de desaprobados");
  muestraArchivoAlumnos(ARCHI_DESAPROBADOS);
+ printf("aaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+ vAlumnosArreglo = archivo2Arreglo(ARCHI_ALUMNOS, DIM, alumnosArreglo);
+ printf("%d",vAlumnosArreglo);
+ muestraArregloAlumnos(alumnosArreglo, vAlumnosArreglo);
 
     return 0;
 }
@@ -92,4 +104,19 @@ int ultimoIdAlumno(char nombreArchivo[]){
         ultimoId=alumno.id;
     }
     return ultimoId;
+}
+int archivo2Arreglo (char archivo[],int dim, stAlumno arreglo[]){
+FILE *archi = fopen(archivo,"rb");
+stAlumno alumno;
+int i = 0;
+if(archi)
+{
+    while (fread(&alumno,sizeof(stAlumno),1,archi)>0 && i <= dim)
+    {
+        arreglo[i] = alumno;
+        i++;
+    }
+    fclose(archi);
+}
+return i;
 }
